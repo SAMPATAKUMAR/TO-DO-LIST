@@ -1,0 +1,124 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing : border-box;
+    font-family : 'Poppins', sans-serif;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0763ed 0%, #dcdfe3 100%);
+    padding: 10px;
+
+}
+
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    height: auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    border:5px solid #000205;
+    background: linear-gradient(135deg, #315d25 0%, #550785 100%);
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius:  15px;
+}
+
+.todo-app h2{
+    color:black;
+    display: flex;
+    align-items: center;
+    margin-bottom:  20px;
+}
+.todo-app h2 img{
+    margin-left: 10px;
+    width: 30px;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #d9d9d9;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+input{
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 18px;
+    color: #000;
+    outline: none;  
+    border-radius: 15px;
+    margin-right: 10px;
+
+}
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #0763ed;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+ul li{
+    list-style: none;
+    font-size: 17px;
+    color: #ffffff;
+    padding: 12px  8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 8px;
+}
+ul li::before{
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    color: #ffffff;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    left: 8px;
+    top: 12px;
+}
+
+ul li.checked{
+    color:#d6c1c1;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(images/checked.png);
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    height: 40px;
+    width: 40px;
+    font-size: 22px;
+    line-height: 40px;
+    text-align: center;
+    color: #000000;
+    justify-content: center;
+    cursor: pointer;
+    transition: color 0.3s;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+ul li span:hover{
+    background-color: #9ebff4;
+    transition: background-color .8s;
+}
